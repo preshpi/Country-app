@@ -56,11 +56,11 @@ function App() {
               </React.Suspense>
               } /> 
 
-              <Route path="/details" element={
+              {/* <Route path="/details" element={
               <React.Suspense fallback='Loading...'>
                <LazyDetails />
               </React.Suspense>
-              } /> 
+              } />  */}
             </Routes>
      </div>
     </>

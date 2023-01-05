@@ -7,6 +7,33 @@ body{
   font-family: 'Inter', sans-serif;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+@keyframes circular-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.circular-loading {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.circular-loading-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #ddd;
+  border-color: #ddd transparent #ddd transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
