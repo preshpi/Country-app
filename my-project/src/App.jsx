@@ -1,8 +1,11 @@
+import React from "react";
 import { useEffect, useState } from "react";
+import {  Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Moon } from "iconsax-react";
 import { Sun1 } from "iconsax-react";
-import Countries from "./components/Countries";
+const LazyDetails = React.lazy(() => import('./components/Details'))
+const LazyCountries = React.lazy(() => import('./components/Countries'))
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -45,7 +48,21 @@ function App() {
         </button>
       </div>
 
-      <Countries />
+     <div>
+            <Routes>              
+              <Route path="/" element={
+              <React.Suspense>
+               <LazyCountries />
+              </React.Suspense>
+              } /> 
+
+              <Route path="/details" element={
+              <React.Suspense fallback='Loading...'>
+               <LazyDetails />
+              </React.Suspense>
+              } /> 
+            </Routes>
+     </div>
     </>
   );
 }
