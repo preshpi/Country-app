@@ -81,10 +81,10 @@ function Countries() {
               placeholder="Search for a country..."
             />
           </div>
-      </form>
+        </form>
             {/* Filter by category */}
         <select
-          className="ml-auto my-2 text-x  h-[54px] text-black mt-[40px]
+          className="ml-auto my-2 px-2 text-x  h-[54px] text-black mt-[40px]
                        dark:text-white bg-white shadow-xl hover:bg-slate-50 focus:ring-2
                        focus:outline-none focus:ring-slate-50 font-bold rounded-lg 
                        text-center inline-flex items-center dark:bg-[#374051] 
@@ -128,10 +128,10 @@ function Countries() {
                   />
                 </div>
                 <div className="p-6 text-white">
-                  <h3>{country.name.common}</h3>
-                  <h6>Population: {country.population}</h6>
-                  <h6>Region: {country.region}</h6>
-                  <h6>Capital: {country.capital}</h6>
+                  <h3 className="text-xl font-[900px] mb-2">{country.name.common}</h3>
+                  <h6 className="mb-1">Population: <span className="italic">{country.population}</span></h6>
+                  <h6 className="mb-1">Region: <span className="italic">{country.region}</span></h6>
+                  <h6 className="mb-1">Capital: <span className="italic">{country.capital}</span></h6>
                 </div>
               </div>
             </div>

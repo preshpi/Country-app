@@ -31,7 +31,7 @@ function App() {
   }, [theme]);
   return (
     <>
-      <div className="flex justify-between h-[62px] dark:bg-[#2B3642] bg-white drop-shadow-md text-white lg:px-12 px-6 place-items-center items-center ">
+      <div className="flex justify-between h-[62px] dark:bg-[#2B3642] bg-white drop-shadow-md text-white lg:px-12 px-6 place-items-center items-center">
         <h1 className="font-extrabold text-black dark:text-white">
           Where in the world?
         </h1>
